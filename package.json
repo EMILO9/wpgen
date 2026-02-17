@@ -1,0 +1,60 @@
+{
+	"name": "@emilo/wpgen",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./dist/app/index.cjs",
+	"module": "./dist/app/index.mjs",
+	"types": "./dist/app/index.d.cts",
+	"exports": {
+		".": {
+			"require": {
+				"default": "./dist/app/index.cjs",
+				"types": "./dist/app/index.d.cts"
+			},
+			"import": {
+				"default": "./dist/app/index.mjs",
+				"types": "./dist/app/index.d.mts"
+			}
+		}
+	},
+	"bin": {
+		"wpgen": "./dist/cli/index.mjs"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsdown",
+		"attw": "attw --pack ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/EMILO9/wpgen.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"bugs": {
+		"url": "https://github.com/EMILO9/wpgen/issues"
+	},
+	"homepage": "https://github.com/EMILO9/wpgen#readme",
+	"devDependencies": {
+		"@arethetypeswrong/cli": "^0.18.2",
+		"@types/fs-extra": "^11.0.4",
+		"@types/node": "^25.2.3",
+		"tsdown": "^0.20.3",
+		"typescript": "^5.9.3"
+	},
+	"dependencies": {
+		"commander": "^14.0.3",
+		"cosmiconfig": "^9.0.0",
+		"cosmiconfig-typescript-loader": "^6.2.0",
+		"fs-extra": "^11.3.3",
+		"handlebars": "^4.7.8",
+		"listr2": "^10.1.0",
+		"parse-packagejson-name": "^1.1.0",
+		"slugify": "^1.6.6",
+		"zod": "^4.3.6"
+	}
+}
